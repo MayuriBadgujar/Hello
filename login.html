@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Column Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+       background-color: white;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      /* width: 100%; */
+      gap: 20px;
+      
+    }
+
+    .column {
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+    }
+
+    .login-page, .random-text {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+     
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #05020f;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      width: 94%;
+    }
+
+    button:hover {
+      background-color: #061f15;
+    }
+
+    .cancelbtn {
+      background-color: #030216;
+      margin-top: 10px;
+    }
+
+    .imgcontainer img {
+      width: 100px;
+      border-radius: 50%;
+      text-align: center;
+    }
+    .column{
+        height: 200px;
+    }
+    .x1{
+        height: 390px;
+       background-color: rgb(5, 5, 23);
+       transition: transform .5s;;
+    }
+    .x2{
+        height: 325px;
+        background-color: rgb(5, 5, 23);
+    }
+    .x3{
+        height: 340px;
+        background-color: rgb(5, 5, 23);
+    }
+    .i1{
+        text-align: center;
+    }
+    h3:hover{
+   background-color: #05021c;
+    }
+    p{
+        color: white;
+    }
+ 
+    img{
+       
+
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .column {
+        width: 100%;
+       
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- First Column: Login Pages -->
+  <div class="column">
+    <div class="login-page">
+      <h3 style="text-align: center;color: black;">Company Login</h3>
+      <form >
+        <div class="imgcontainer i1">
+          <img src="./Images/icons8-avatar-80.png" alt="Avatar">
+        </div>
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+        <button type="button" class="cancelbtn">Cancel</button>
+      </form>
+    </div>
+
+    <div class="login-page">
+      <h3 style="text-align: center;color: black;">Client Login</h3>
+      <form>
+         <div class="imgcontainer i1">
+          <img src="Images/icons8-avatar-80.png">
+        </div>
+        <label for="email2">Email:</label>
+        <input type="email" id="email2" required>
+        <label for="password2">Password:</label>
+        <input type="password" id="password2" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <div class="login-page">
+      <h3 style="text-align: center;color: black;background-color: #f8f9fa;">Vendor Login</h3>
+      <form>
+         <div class="imgcontainer  i1">
+          <img src="./Images/icons8-avatar-80.png" alt="Avatar">
+        </div>
+        <label for="email3">Email:</label>
+        <input type="email" id="email3" required>
+        <label for="password3">Password:</label>
+        <input type="password" id="password3" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Second Column: Random Text -->
+  <div class="column">
+    <div class="random-text  x1">
+      <h3 id="c1"  style="color: white;"><i>Info for Company Login</i></h3>
+      <p>"We listen, we deliver, and we grow together."</p>
+<img src="https://imgs.search.brave.com/dmnbBLDR3CNHNhTSQTyGaibH7BqlqWJF10WYg-kj0H8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzEwLzc3Lzc1Lzg5/LzM2MF9GXzEwNzc3/NTg5NDhfTXJCUk9t/V2FyVUZXaWxKYWFJ/YkxoVHFZa0x3WFJK/SmUuanBn"  style="height: 200px;width: 300px;text-align: end;"
+
+ alt="">    </div>
+
+    <div class="random-text x2">
+      <h3 id="c2" style="color: white;"><i>Info for Client Login</i></h3>
+      <p>"Beyond Business, We Build Connections."</p>
+      <img src="https://imgs.search.brave.com/wBOCNOXBLPQXRD0k41s4FPAWk2aOcPj2Vp1_6UtD8RY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cGhvdG9zLWdyYXR1/aXRlL2NvdXAtbW95/ZW4tcGVyc29ubmVz/LXNlLXNlcnJhbnQt/bWFpbi1hdS10cmF2/YWlsXzIzLTIxNDkz/MDA2NjIuanBnP3Np/emU9NjI2JmV4dD1q/cGc"  style="height: 200px;width: 300px;text-align: end;"
+
+      alt="">
+    </div>
+
+    <div class="random-text x3">
+      <h3 id="c3" style="color: white;"><i> for Vendor Login</i></h3>
+      <p>"Where Quality Meets Competitive Bidding!"</p>
+      <img src="https://imgs.search.brave.com/rRcvuuhqquIBkfomx1N4eG8gsaBVNEHb2jJelES5J_4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90ZG1r/dHByZC5ibG9iLmNv/cmUud2luZG93cy5u/ZXQvdGVuZGVycy1k/aXJlY3QtcHJkLzIw/MjMvMTEvc2h1dHRl/cnN0b2NrXzE5NDE1/NDE0MzItc2NhbGVk/LTEud2VicA" style="height: 200px;width: 300px;text-align: end;"
+
+      alt="">
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
